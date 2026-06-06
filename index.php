@@ -1,4 +1,2 @@
 <?php
-
-require_once '.\controllers\route.controller.php';
-
+require_once '.\app\controllers\route.controller.php';

@@ -1,13 +1,6 @@
-Options -Indexes -MultiViews
+Options All -Indexes
+Options -MultiViews
 
 RewriteEngine On
-RewriteBase /
-
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-RewriteRule ^.*$ index.php [QSA, L]
-
-<FilesMatch "^(\.env|composer\.(json|lock)|package\.json)$">
-    Require all denied
-</FilesMatch>
+RewriteRule ^ index.php [QSA,L]
